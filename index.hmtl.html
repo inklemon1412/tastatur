@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>this</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        #btn {
+            background-color: rgb(122, 192, 192);
+            cursor: pointer;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+<input id="tbInput" type="text" />
+
+<div id="VirtualKey">
+    <input id="btn" type="button" value="a" onclick="input(this);" />
+    <input id="btn" type="button" value="b" onclick="input(this);" />
+    <input id="btn" type="button" value="c" onclick="input(this);" />
+    <input id="btn" type="button" value="d" onclick="input(this);" />
+    <input id="btn" type="button" value="e" onclick="input(this);" />
+    <br />
+    <input id="btn" type="button" value="f" onclick="input(this);" />
+    <input id="btn" type="button" value="g" onclick="input(this);" />
+    <input id="btn" type="button" value="h" onclick="input(this);" />
+    <input id="btn" type="button" value="i" onclick="input(this);" />
+    <input id="btn" type="button" value="j" onclick="input(this);" />
+    <br />
+    <input id="btn" type="button" value="k" onclick="input(this);" />
+    <input id="btn" type="button" value="l" onclick="input(this);" />
+    <input id="btn" type="button" value="m" onclick="input(this);" />
+    <input id="btn" type="button" value="n" onclick="input(this);" />
+    <input id="btn" type="button" value="o" onclick="input(this);" />
+    <br />
+    <input id="btnDel" type="button" value="Backspace" onclick="del();" />
+</div>
+
+<script>
+    function input(e){
+        let tbInput = document.getElementById("tbInput");
+        tbInput.value = tbInput.value + e.value;
+    }
+
+
+    function del(){
+        let tbInput = document.getElementById("tbInput");
+        tbInput.value = tbInput.value.substr(0, tbInput.value.length - 1); 
+    }
+</script>
+</body>
+</html>
